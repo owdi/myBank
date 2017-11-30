@@ -2,13 +2,13 @@
     <div class="form-group">
         <form>
             <h1 class="text-center">Inscription</h1>
-            <input type="text" name="username" class="form-control" placeholder="Nom d'utilisateur"/><br/>
-            <input type="email" name="email" class="form-control" placeholder="email"/><br/>
-            <input type="password" name="password" class="form-control" placeholder="password"/><br/>
+            <input type="text" name="username" class="form-control" placeholder="Nom d'utilisateur" required/><br/>
+            <input type="email" name="email" class="form-control" placeholder="email" required/><br/>
+            <input type="password" name="password" class="form-control" placeholder="password" required/><br/>
             <button class="btn btn-info btn-block" value="register" type="submit">S'enregistrer</button>
         </form>
-        <div id="tabs" data-tabs="tabs">
-            <p class="text-center"><a href="/login" data-toggle="tab">Se connecter</a></p>
+        <div id="tabs">
+            <p class="text-center"><a href="/login">Vous avez déjà un compte ?</a></p>
         </div>
     </div>
 </template>

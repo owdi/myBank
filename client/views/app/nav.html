@@ -1,5 +1,19 @@
 <template name="nav">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="/">myBank</a>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">myBank</a>
+        </div>
+        {{#if currentUser}}
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown ">
+                <a href="#" class="dropdown-toggle info-user-account" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="https://d14xs1qewsqjcd.cloudfront.net/assets/avartar.png"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/account">Mon compte</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" class="logout">Déconnexion</a></li>
+                </ul>
+            </li>
+        </ul>
+        {{/if}}
     </div>
  </template>

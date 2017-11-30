@@ -1,4 +1,4 @@
-Template.dashboard.events({
+Template.nav.events({
 
     'click .logout': function (event) {
 

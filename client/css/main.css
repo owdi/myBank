@@ -13,3 +13,13 @@ html, body{
     width: 100%;
     height: 60px;
 }
+
+.info-user-account img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
+#tabs{
+    margin: 10px 0 0;
+}

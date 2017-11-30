@@ -1,8 +1,7 @@
 <template name="dashboard">
-        {{#if currentUser}}
-        <p>
-            Connecté !
-            <p><a href="#" class="logout">Logout</a></p>
-        </p>
+    {{#if currentUser}}
+    <div class="text-center">
+        <p>Bienvenue <span class="text-capitalize">{{currentUser.username}} | Nous sommes le</span></p>
+    </div>
     {{/if}}
 </template>
