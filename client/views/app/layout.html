@@ -1,0 +1,13 @@
+<template name="layout">
+    <header class="navbar navbar-default" role="navigation">
+        {{> nav}}
+    </header>
+
+    <div class="container">
+        {{> Template.dynamic template=container}}
+    </div>
+
+    <footer class="footer">
+        {{> footer}}
+    </footer>
+</template>
