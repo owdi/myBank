@@ -4,6 +4,12 @@ html, body{
     min-height: 100%;
 }
 
+.info-user-account img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
 .footer{
     background-color: #e7e7e7;
     color: #777;
@@ -14,10 +20,9 @@ html, body{
     height: 60px;
 }
 
-.info-user-account img {
-    width: 20px;
-    float: left;
-    margin-right: 10px;
+.mainContainer{
+    width: 500px;
+    margin: auto;
 }
 
 #tabs{

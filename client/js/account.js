@@ -11,12 +11,16 @@ Template.account.events({
     
             event.preventDefault();
     
-            // var user        = $("input[name='username']").val(),
-            //     email       = $("input[name='password']").val();
-            var email = 'emails.0.address';
+            var profileInfo = {
+                'firstname': $("input[name='firstname']").val(),
+                'lastname':  $("input[name='lastname']").val(),
+                'birthdate': $("#birthdate").val(),
+                'gender': $('#gender').val()
+            };
+
             var userOptions = {
-                //user: $("input[name='username']").val(),
-                'emails.0.address': $("input[name='email']").val()
+                user: $("input[name='username']").val(),
+                profile: profileInfo
             };
     
             Meteor.users.update(Meteor.userId(), 
@@ -24,7 +28,15 @@ Template.account.events({
                     $set: userOptions}, function(error) {
                     console.log(Meteor.userId());
                         if (error) {
-                            console.log(error.reason);
+                            Bert.alert({
+                                message: 'La mise à jour a échoué',
+                                type: 'danger'
+                            });
+                        }else{
+                            Bert.alert({
+                                message: 'Votre compte a bien été mis à jour',
+                                type: 'info'
+                            });
                         }
                 });
         }

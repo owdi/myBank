@@ -1,10 +1,23 @@
 <template name="account">
     {{#if currentUser}}
-        <div class="form-group">
+        <div class="form-group mainContainer">
             <h1 class="text-center">Mon Compte</h1>
             <form class="form-signin" action="" method="">
-                <input type="text" name ="username" class="form-control" placeholder="{{currentUser.username}}"><br/>
-                <input type="text" name ="email" class="form-control" placeholder="Email"><br/>
+                <input type="text" name ="username" class="form-control" placeholder="Votre pseudo actuel est : {{currentUser.username}}"><br/>
+                <input type="text" name ="email" class="form-control" disabled placeholder="{{currentUser.emails.[0].address}}"><br/>
+                <input type="text" name ="lastname" class="form-control" placeholder="{{#if currentUser.profile.lastname}} {{currentUser.profile.lastname}} {{else}} Nom{{/if}}"><br/>
+                <input type="text" name ="firstname" class="form-control" placeholder="{{#if currentUser.profile.firstname}} {{currentUser.profile.firstname}} {{else}} Prénom{{/if}}"><br/>
+                <select id="gender" class="input-select form-control">
+                    <option value="man">Homme</option>
+                    <option value="woman">Femme</option>
+                </select>
+                <br/>
+                <div class="well"> 
+                    <div class="form-group">
+                        <label>Date de naissance</label>
+                        <input type="date" id="birthdate" class="form-control" placeholder="{{#if currentUser.profile.birthdate}} {{currentUser.profile.birthdate}} {{else}} Date de naissance{{/if}}">{{currentUser.profile.birthdate}}
+                    </div>
+                </div>
                 <button class="btn btn-info btn-block login" value="login" type="submit">Enregistrer</button>
             </form>
         </div>
